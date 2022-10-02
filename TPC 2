@@ -7,10 +7,10 @@ if N == 1:
     while a != num:
         a = int(input("Tente adivinhar o número >>"))
         if a > num:
-            print("O número que pensei é menor! tenta outra vez")
+            print("O número que pensei é menor que", a, "! tenta outra vez")
             tent = tent + 1
         elif a < num:
-            print("O número que pensei é maior! tenta outra vez")
+            print("O número que pensei é maior que", a, "! tenta outra vez")
             tent = tent + 1
     print("SLAY! CONSEGUISTE ADIVINHAR O NÚMERO ", num, "DEPOIS DE ", tent, "TENTATIVAS")
 if N == 2:
