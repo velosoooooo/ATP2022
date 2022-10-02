@@ -1,0 +1,26 @@
+import random
+N = int(input("Jogo adivinha o número. Quem deve adivinhar? Você (1) ou o computador (2)?"))
+tent = 0
+a = 0
+if N == 1:
+    num = random.randrange(1, 101)
+    while a != num:
+        a = int(input("Tente adivinhar o número >>"))
+        if a > num:
+            print("O número que pensei é menor! tenta outra vez")
+            tent = tent + 1
+        elif a < num:
+            print("O número que pensei é maior! tenta outra vez")
+            tent = tent + 1
+    print("SLAY! CONSEGUISTE ADIVINHAR O NÚMERO ", num, "DEPOIS DE ", tent, "TENTATIVAS")
+if N == 2:
+    num = int(input("Coloque o número que quer que o computador pense"))
+    while a != num:
+        a = random.randrange(1, 101)
+        if a > num:
+            print("O número que o computador foi", a, "e é maior do que o que eu pensei! o computador vai pensar outra vez!")
+            tent = tent + 1
+        elif a < num:
+            print("O número que o computador foi", a, "e é menor do que o que eu pensei! o computador vai pensar outra vez!")
+            tent = tent + 1
+    print("SLAY! O COMPUTADOR ADIVINHOU O NÚMERO ", num, "DEPOIS DE ", tent, "TENTATIVAS")
