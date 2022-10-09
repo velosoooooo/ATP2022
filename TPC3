@@ -1,0 +1,151 @@
+import os
+import random
+
+#Cria Lista (1)
+def crialistarandom():
+    lista = []
+    num_elem = random.randrange(1,101)
+    while num_elem > 0:
+        num = random.randrange(1,101)
+        lista.append(num)
+        num_elem = num_elem - 1
+
+#Ler lista (2)
+def leLista(N):
+    lista = []
+    while N > 0:
+        a = int(input("Quero adicionar o número >>"))
+        lista.append(a)
+        N = N - 1
+    return lista
+
+#Soma lista (3)
+def somaLista(lista):
+    soma = 0
+    for n in lista:
+        soma = soma + n
+    return soma
+
+#Media lista (4)
+def mediaLista(lista):
+    soma = 0
+    b = 0
+    for n in lista: 
+        soma = soma + n
+        b = b + 1
+    media = soma/b
+    return media
+
+#Maior elemento lista (5)
+def maiorLista(lista):
+    maior = lista[0]
+    for n in lista:
+        if n >= maior:
+            maior = n    
+    return maior
+
+#Menor lista (6)
+def menorLista(lista):
+    menor = lista[0]
+    for n in lista:
+        if n <= menor:
+            menor = n
+    return menor
+
+#Ordem crescente (7)
+def estaOrdenadacrescente(lista):
+    res = True
+    a = lista[0]
+    for n in lista:
+        if a <= n:
+            a = n
+        else:
+            res = False
+    return res
+
+#Ordem decrescente (8)
+def estaOrdenadadecrescente(lista):
+    res = True
+    a = lista[0]
+    for n in lista:
+        if a >= n:
+            a = n
+        else:
+            res = False
+    return res
+
+opcao = 1 
+lista = crialistarandom()
+while opcao != 0:
+    print(""" (1) Criar lista 
+(2) Ler lista
+(3) Soma dos elementos da lista
+(4) Média dos elementos da lista
+(5) Maior elemento da lista
+(6) Menor elemento da lista
+(7) A lista está ordenada por ordem crescente?
+(8) A lista está ordenada por ordem decrescente?
+(9) Procura um elemento
+(0) Sair """)
+    opcao = int(input("Qual opção pretende escolher? >>"))
+    os.system('cls')
+    if opcao == 1:
+        print("A lista gerada foi", lista)
+        os.system('cls')
+    elif opcao == 2:
+        N = int(input("A lista vai ter quantos elementos?"))
+        lista = leLista(N)
+        print("A lista criada foi", lista)
+        os.system('cls')
+    elif opcao == 3:
+        print("A lista é a seguinte >>", lista)
+        soma = somaLista(lista)
+        print("A soma da lista é >>", soma)
+        os.system('cls')
+    elif opcao == 4:
+       print("A lista é a seguinte >>", lista)
+       media = mediaLista(lista)
+       print("A media da lista é >>", media)
+       os.system('cls')
+    elif opcao == 5:
+        print("A lista é a seguinte >>", lista)
+        maior = maiorLista(lista)
+        print("O maior da lista é >>", maior)
+        os.system('cls')
+    elif opcao == 6:
+        print("A lista é a seguinte >>", lista)
+        menor = menorLista(lista)
+        print("O menor da lista é >>", menor)
+        os.system('cls')
+    elif opcao == 7:
+        print("A lista é a seguinte >>", lista)
+        valor = estaOrdenadacrescente(lista)
+        if valor == True:
+            print("A lista está por ordem crescente")
+        else:
+            print("A lista não está por ordem crescente")
+        os.system('cls')
+    elif opcao == 8:
+        print("A lista é a seguinte >>", lista)
+        valor == estaOrdenadadecrescente(lista)
+        if valor == True:
+            print("A lista está por ordem decrescente")
+        else:
+            print("A lista não está por ordem decrescente")
+        os.system('cls')
+    elif opcao == 9:
+        print("A lista é a seguinte >>", lista)
+        valor = False
+        N = int(input("Qual número pretende procurar na lista?"))
+        for n in lista:
+            if N == n:
+                valor = True
+        if valor == True:
+            print("O valor está na lista!")
+        else:
+            print("O valor não está na lista!")
+        os.system('cls')
+    elif opcao == 0:
+        print("A lista é a seguinte >>", lista)
+    else:
+        print("A opção escolhida não é válida, tente novamente")
