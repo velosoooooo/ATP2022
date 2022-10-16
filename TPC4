@@ -1,0 +1,106 @@
+def inserirSala (cinema,sala): #A sala tem que ser definida fora da função, uma vez que um dos argumentos já é o tuplo
+    if sala in cinema:
+        print("A sala que tentou introduzir já se encontra no sistema")
+    else:
+        cinema.append(sala)
+        print("A sala foi adicionada")
+    return cinema
+
+###########################################
+
+def listar(cinema):
+    print("Os filmes em cartaz são:")
+    for sala in cinema:
+        numsala, nlugares , vendidos , filme = sala
+        print(filme)
+        
+###########################################
+
+def listardisp(cinema):
+    for sala in cinema:
+        numsala, nlugares, vendidos, filme = sala
+        print("Sala:", numsala, end="")
+        print("--")
+        print("Filme:", filme)
+        print("--")
+        print(nlugares - len(vendidos))
+
+###########################################
+
+def disp(cinema, nsala, lugar):
+    res = True
+    for sala in cinema:
+        numsala, nlugares, vendidos, filme = sala
+        if nsala == numsala:
+            if lugar in vendidos:
+                res = False
+    return res
+
+##############################################
+
+def reset(cinema):
+    n = 0
+    while n!=1 and n!=2:
+        n = int(input("Tem a certeza que pretende resetar tudo? 1 - sim; 2 - não"))
+        if n ==1:
+            cinema = []
+        elif n != 1 and n!=2:
+            print("Resposta inválida")
+        else:
+            main()
+            
+###########################################
+
+def main():
+    print("""1 - Inserir sala;
+2 - Lista filmes;
+3 - Lugares disponíveis
+4 - Lugar disponível em uma sala específica
+5 - Reset
+6 - Vender bilhete
+0 - Sair""")
+    
+#############################################
+
+def venderbilhete(cinema, nsala, lugar):
+    if disp(cinema,nsala,lugar) == True:
+        for n in cinema:
+            numsala, nlugares, vendidos, filme = n
+            if numsala==nsala:
+                vendidos.append(lugar)
+                print("Lugar  vendido")
+    else:
+        print("O lugar que tentou vender já não se encontra disponível")
+
+##############################################           
+
+cinema = []
+opcao = 1
+while opcao != 0:
+    main()
+    opcao = int(input("Introduza a opção que deseja"))
+    if opcao == 1:
+        numsala = int(input("Introduza o número da sala"))
+        filme = str(input("Introduza o nome do filme em exposição na sala"))
+        nlugares = int(input("Introduza o número de lugares na sala"))
+        nvendidos = []
+        sala = (numsala,nlugares,nvendidos,filme)
+        inserirSala(cinema,sala)
+    elif opcao == 2:
+        listar(cinema)
+    elif opcao == 3:
+        listardisp(cinema)
+    elif opcao == 4:
+        nsala = int(input("Introduza o número da sala"))
+        lugar= int(input("Introduza o lugar"))
+        print(disp(cinema,nsala,lugar)) 
+    elif opcao == 5:
+        reset(cinema)
+    elif opcao == 6:
+        venderbilhete(cinema,nsala,lugar)
+        nsala = int(input("Introduza o número da sala"))
+        lugar= int(input("Introduza o lugar"))
+    elif opcao == 0:
+        print("Saiu do programa")
+    else:
+        print("Opção não válida, tente novamente")
