@@ -1,0 +1,109 @@
+def leinf(fnome):
+    fp = open(fnome)
+    pop = []
+    fp.readline()
+    for linha in fp:
+        pessoa = linha.split(",")
+        pessoa[5] = pessoa[5].replace("\n","")
+        pop.append((int(pessoa[0]),pessoa[1],pessoa[2],pessoa[3],pessoa[4],pessoa[5]))
+    return pop     
+
+leinf("myheart.csv")
+
+def distdoensex(fnome):
+    lista = leinf(fnome)
+    dist={}
+    for pessoa in lista:
+        if pessoa[1] == "M":
+            if pessoa[5] == "1":  
+                if 'McD' in dist:
+                    dist['McD']=dist['McD']+1
+                else:
+                    dist['McD'] = 1
+            else:
+                if 'MsD' in dist:
+                   dist['MsD']=dist['MsD']+1
+                else:
+                    dist['MsD'] = 1
+    return dist
+
+distdoensex(leinf("myheart.csv"))
+
+def distidad(fnome):
+    lista = leinf(fnome)
+    dist = {}
+    for utente in lista:
+        if utente[5]=="1":
+            if utente[0]>=30 and utente[0]<35:
+                if 'Cd(30-34)' in dist:
+                    dist['Cd(30-34)']=dist["Cd(30-34)"]+1
+                else:
+                    dist['Cd(30-34)'] = 1 
+            elif utente[0]>=35 and utente[0]<40:
+                if 'Cd(35-39)' in dist:
+                    dist['Cd(35-39)']=dist["Cd(35-39)"]+1
+                else:
+                    dist['Cd(35-39)'] = 1
+            elif utente[0]>=40 and utente[0]<45:
+                if 'Cd(40-44)' in dist:
+                    dist['Cd(40-44)']=dist["Cd(40-44)"]+1
+                else:
+                    dist['Cd(40-44)'] = 1
+            elif utente[0]>=45 and utente[0]<50:
+                if 'Cd(45-49)' in dist:
+                    dist['Cd(45-49)']=dist["Cd(45-49)"]+1
+                else:
+                    dist['Cd(45-49)'] = 1
+            elif utente[0]>=50 and utente[0]<55:
+                if 'Cd(50-54)' in dist:
+                    dist['Cd(50-54)']=dist["Cd(50-54)"]+1
+                else:
+                    dist['Cd(50-54)'] = 1 
+            elif utente[0]>=55 and utente[0]<60:
+                if 'Cd(55-59)' in dist:
+                    dist['Cd(55-59)']=dist["Cd(55-59)"]+1
+                else:
+                    dist['Cd(55-59)'] = 1 
+            elif utente[0]>=60 and utente[0]<65:
+                if 'Cd(60-64)' in dist:
+                    dist['Cd(60-64)']=dist["Cd(60-64)"]+1
+                else:
+                    dist['Cd(60-64)'] = 1
+        else:
+            if utente[0]>=30 and utente[0]<35:
+                if 'Sd(30-34)' in dist:
+                    dist['Sd(30-34)']=dist["Sd(30-34)"]+1
+                else:
+                    dist['Sd(30-34)'] = 1 
+            elif utente[0]>=35 and utente[0]<40:
+                if 'Sd(35-39)' in dist:
+                    dist['Sd(35-39)']=dist["Sd(35-39)"]+1
+                else:
+                    dist['Sd(35-39)'] = 1
+            elif utente[0]>=40 and utente[0]<45:
+                if 'Sd(40-44)' in dist:
+                    dist['Sd(40-44)']=dist["Sd(40-44)"]+1
+                else:
+                    dist['Sd(40-44)'] = 1
+            elif utente[0]>=45 and utente[0]<50:
+                if 'Sd(45-49)' in dist:
+                    dist['Sd(45-49)']=dist["Sd(45-49)"]+1
+                else:
+                    dist['Sd(45-49)'] = 1
+            elif utente[0]>=50 and utente[0]<55:
+                if 'Sd(50-54)' in dist:
+                    dist['Sd(50-54)']=dist["Sd(50-54)"]+1
+                else:
+                    dist['Sd(50-54)'] = 1 
+            elif utente[0]>=55 and utente[0]<60:
+                if 'Sd(55-59)' in dist:
+                    dist['Sd(55-59)']=dist["Sd(55-59)"]+1
+                else:
+                    dist['Sd(55-59)'] = 1 
+            elif utente[0]>=60 and utente[0]<65:
+                if 'Sd(60-64)' in dist:
+                    dist['Sd(60-64)']=dist["Sd(60-64)"]+1
+                else:
+                    dist['Sd(60-64)'] = 1
+            
+    return dist
