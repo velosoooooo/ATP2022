@@ -131,7 +131,7 @@ def distidad(fnome):
 coldoen(leinf("myheart.csv"))
 
 def imprimir_tabela (dicionario, titulo):
-    
+    titulo = str(input("Qual o título?"))
 
     print ("""
     -----------------------------------------------------------------------------------------""")
@@ -150,17 +150,13 @@ while opcao != "0":
     menu()
     opcao = input ("    Introduza uma opção: ")
     if opcao == "1":
-        listar_utentes_por_pagina( lista_utentes)
+        distdoensex("myheart.csv")
     elif opcao == "2":
-        imprimir_tabela (listar_sexo(lista_utentes), "SEXO")
+        distidade("myheart.csv")
     elif opcao == "3":
-        imprimir_tabela(listar_idade(lista_utentes), "IDADE")
+        coldoen(leinf("myheart.csv"))
     elif opcao == "4":
-        imprimir_tabela (listar_tensao (lista_utentes), "TENSÃO")
-    elif opcao == "5":
-        imprimir_tabela (listar_colesterol(lista_utentes), "COLESTEROL")
-    elif opcao == "6":
-        imprimir_tabela (listar_batimento(lista_utentes), "BATIMENTOS")
+        imprimir_tabela (listar_tensao (lista_utentes),titulo)
     elif opcao== "0":
         break
     else:
