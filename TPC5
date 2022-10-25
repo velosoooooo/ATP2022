@@ -107,3 +107,63 @@ def distidad(fnome):
                     dist['Sd(60-64)'] = 1
             
     return dist
+    
+    def coldoen(lista):
+    dist = {}
+    amp = 10
+    for _,_,_,col,_,temDoenca in lista:
+        min = (col//amp)*amp
+        max = min + amp - 1
+        if temDoenca == "1":
+            intervalo = "[" + "Cd(" + str(min).rjust(3,"0") + "-" + str(max).rjust(3,"0") + ")]"    
+            if intervalo in dist.keys():
+                dist[intervalo]=dist[intervalo]+1
+            else:
+                dist[intervalo]=1
+        else:
+            intervalo = "[" + "Sd(" + str(min).rjust(3,"0") + "-" + str(max).rjust(3,"0") + ")]"    
+            if intervalo in dist.keys():
+                dist[intervalo]=dist[intervalo]+1
+            else:
+                dist[intervalo]=1
+    dist = dict(sorted(dist.items()))
+    return dist
+coldoen(leinf("myheart.csv"))
+
+def imprimir_tabela (dicionario, titulo):
+    
+
+    print ("""
+    -----------------------------------------------------------------------------------------""")
+    print ( "                                DISTRIBUIÇÃO DA DOENÇA POR " + str(titulo) + "                ")
+    print("""    -----------------------------------------------------------------------------------------
+    | Grupo          Com doença              Sem Doença                   Total             |
+    -----------------------------------------------------------------------------------------""")
+    dicionario = dict( sorted (dicionario.items()))
+    for intervalo, valores in dicionario.items():
+        print(f"      {intervalo:<15} {valores[0]:<15}        {valores[1]:>7}                        {(valores[0]+valores[1]):<15} ")
+        
+opcao = "1"
+os.system("cls")
+lista_utentes = leitura_ficheiro ("myheart.csv")
+while opcao != "0":
+    menu()
+    opcao = input ("    Introduza uma opção: ")
+    if opcao == "1":
+        listar_utentes_por_pagina( lista_utentes)
+    elif opcao == "2":
+        imprimir_tabela (listar_sexo(lista_utentes), "SEXO")
+    elif opcao == "3":
+        imprimir_tabela(listar_idade(lista_utentes), "IDADE")
+    elif opcao == "4":
+        imprimir_tabela (listar_tensao (lista_utentes), "TENSÃO")
+    elif opcao == "5":
+        imprimir_tabela (listar_colesterol(lista_utentes), "COLESTEROL")
+    elif opcao == "6":
+        imprimir_tabela (listar_batimento(lista_utentes), "BATIMENTOS")
+    elif opcao== "0":
+        break
+    else:
+        print ("\n    [ ERRO: Comando não aceite, tente novamente. ]")
+    input("\n    [ Tecla «ENTER» para continuar... ]")
+    os.system("cls")
