@@ -1,0 +1,95 @@
+import csv
+import matplotlib.pyplot as plt
+
+def readDataset (fnome):
+    f = open(fnome,encoding='utf-8')
+    f.readline()
+    csv_reader = csv.reader(f,delimiter=';')
+    obras=[]
+    for row in csv_reader:
+        obras.append(tuple(row))
+    f.close
+    return obras
+
+def numobras (fnome):
+    lista = readDataset(fnome)
+    num_obras = 0
+    for n in lista:
+        num_obras = num_obras + 1
+    return num_obras
+
+def tabela (lista):
+    print("Título              :: Descrição           :: Compositor          :: Ano                ")
+    print(f"{lista[0][:20]:20s}:: {lista[1][:20]:20s}:: {lista[4][:20]:20s}:: {lista[2][:20]:20s}")    
+
+def ordTit(t):
+    return t[0]
+
+def titAno(myObras):
+    res = []
+    for nome,_,ano,*_ in myObras:
+        res.append((nome,ano))
+    res.sort(key=ordTit)
+    return res
+
+def ordAno(t):
+    return t[1]
+
+def Anotit(myObras):
+    res = []
+    for nome,_,ano,*_ in myObras:
+        res.append((nome,ano))
+    res.sort(key=ordAno)
+    return res
+
+def comp(myObras):
+    res = []
+    for nome,*_ in myObras:
+        res.append(nome)
+    res.sort()
+    return res
+
+def obras_periodo(myObras):
+    res = {}
+    for nome,_,_,periodo,*_ in myObras:
+        if periodo not in res.keys():
+            res[periodo]=[]
+            res[periodo].append(nome)
+        else:
+            res[periodo].append(nome)
+    return res
+
+def obras_ano(myObras):
+    res = {}
+    for nome,_,ano,*_ in myObras:
+        if ano not in res.keys():
+            res[ano]=[]
+            res[ano].append(nome)
+        else:
+            res[ano].append(nome)
+    return res
+
+def obras_comp(myObras):
+    res = {}
+    for nome,_,_,_,comp,*_ in myObras:
+        if comp not in res.keys():
+            res[comp]=[]
+            res[comp].append(nome)
+        else:
+            res[comp].append(nome)
+    return res
+
+def graficos (distrib):
+    plt.bar(distrib.keys(), distrib.values())
+    plt.xticks([x for x in range (0, len(distrib.keys()))], distrib.keys(), rotation=75)
+    plt.subplots_adjust(left=0.1, bottom=0.25, right=0.9, top=0.9, wspace=0, hspace=0)
+    plt.show()
+    
+def inv_estrut (dist):
+    dist = obras_comp(lista)
+    lista = list.dist()
+    
+
+
+def pp(obra):
+    print(f"{obra[0][:25]:25s} :: {obra[4][:30]:30s} :: {obra[3][:15]:15s} :: {obra[2][:6]:6s}")
