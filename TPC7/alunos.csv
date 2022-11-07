@@ -1,0 +1,101 @@
+id_aluno,nome,curso,tpc1,tpc2,tpc3,tpc4
+a1,Aysha Melanie Gilberto,LEI,12,8,19,8,11.8
+a2,Igor André Cantanhede,ENGFIS,12,16,18,20,16.5
+a3,Laurénio Narciso,ENGFIS,8,14,15,14,12.8
+a4,Jasnoor Casegas,LCC,14,20,17,11,15.5
+a5,Tawseef Rebouças,ENGBIOM,13,14,13,17,14.2
+a6,Eryk Clementino,LEI,10,19,11,14,13.5
+a7,Ianna Noivo,ENGBIOM,15,15,17,16,15.8
+a8,Ayla Thaissa Reina,ENGBIOM,12,8,8,18,11.5
+a9,Cássia Viviane Coitã,ENGFIS,19,9,14,10,13.0
+a10,Koby Vindima,LEI,9,14,20,13,14.0
+a11,Gustavo Martim Hernandez,ENGBIOM,11,8,14,11,11.0
+a12,Siddarta Beiriz,LEI,17,10,16,16,14.8
+a13,Daniela Patrícia Montes,ENGBIOM,15,15,18,19,16.8
+a14,Kaylla Pessego,LCC,10,14,17,15,14.0
+a15,Bianca Cristina Primitivo,ENGBIOM,16,9,18,10,13.2
+a16,Magna Galhardo,ENGFIS,20,18,9,14,15.2
+a17,Grace Isabel Patriarca,LCC,19,13,9,10,12.8
+a18,Saubhagya Buco,LEI,18,18,17,8,15.2
+a19,Ivo Vicente Boisa,ENGBIOM,14,10,18,13,13.8
+a20,Vivaan Castilhos,ENGFIS,15,14,11,12,13.0
+a21,Layana Camejo,ENGFIS,17,12,10,20,14.8
+a22,Mahdi Menoita,ENGFIS,11,16,8,16,12.8
+a23,Yifan Cortinado,LEI,19,16,8,18,15.2
+a24,Éder Sodré,ENGFIS,17,13,14,12,14.0
+a25,Dhriti Magano,ENGFIS,19,11,8,19,14.2
+a26,Steve Devesa,ENGBIOM,10,16,8,13,11.8
+a27,Lisandro Mariano Picassinos,ENGFIS,13,10,16,10,12.2
+a28,Itiel Quinoy,LEI,18,18,8,9,13.2
+a29,Pranika Reimoo,LEI,12,16,15,13,14.0
+a30,Manaia Viseu,ENGFIS,8,12,20,11,12.8
+a31,Eva Manuel Caio,ENGFIS,12,16,20,16,16.0
+a32,Ariane Sofia Foja,LEI,20,19,13,18,17.5
+a33,Jaime António Pauseiro,LCC,19,13,8,10,12.5
+a34,Tanisha Marzagoo,ENGBIOM,14,19,13,14,15.0
+a35,Siyon Anca,LEI,8,13,19,15,13.8
+a36,Diana Beatriz Boavista,LCC,19,18,17,12,16.5
+a37,Elisiário Saberio,ENGFIS,18,18,10,19,16.2
+a38,Maira Brites,ENGFIS,13,16,15,17,15.2
+a39,Victória Gabriela Incenso,LEI,17,14,13,8,13.0
+a40,Najua Serôdio,LCC,17,9,16,18,15.0
+a41,Lachezar Rosas,ENGBIOM,16,18,18,15,16.8
+a42,Kattleya Trigueiro,ENGFIS,19,16,14,15,16.0
+a43,Tatiana Guiomar Maricoto,LCC,19,8,15,11,13.2
+a44,Mélanie Daniela Bugalhão,LCC,17,9,17,18,15.2
+a45,Imayame Hespanha,ENGFIS,20,17,19,11,16.8
+a46,Yuri Gabriel Baganha,LCC,15,18,12,16,15.2
+a47,Moisés João Cornelio,LEI,20,16,19,17,18.0
+a48,Nazir Assif Trinta,LEI,14,14,12,8,12.0
+a49,Karamjot Arezes,LEI,10,9,20,12,12.8
+a50,Rishit Justa,ENGBIOM,9,9,9,12,9.8
+a51,Iara de Jesus Gonçalo,ENGFIS,14,8,12,14,12.0
+a52,Stepfan Owusu Lercas,LEI,18,9,16,14,14.2
+a53,Abner Umbelina,ENGBIOM,20,16,10,13,14.8
+a54,Dânia Lucy Montelobo,LEI,18,19,15,11,15.8
+a55,Myla Lopez,ENGFIS,9,17,12,20,14.5
+a56,Hakeem Brazão,LEI,18,18,13,20,17.2
+a57,Quinn Aveiro,ENGBIOM,17,16,9,13,13.8
+a58,Etienne Constentino,ENGBIOM,15,8,9,13,11.2
+a59,Emanuel Marcos Delfina,LEI,9,15,8,13,11.2
+a60,Mariana Catarina Ramalheira,ENGBIOM,17,19,19,11,16.5
+a61,Bradley Tabau,LCC,16,19,16,12,15.8
+a62,Ahmadou Bamba Calcinha,LCC,13,20,8,16,14.2
+a63,Francisco Pedro Derresa,ENGFIS,8,12,20,18,14.5
+a64,Gil Miguel Lima,ENGBIOM,16,19,8,14,14.2
+a65,Leonor Pedro Carqueijeiro,ENGBIOM,19,11,17,8,13.8
+a66,Genrikh Maximovich Vila-Chã,ENGFIS,12,15,13,9,12.2
+a67,Mayra Larissa Rolo,LCC,15,14,17,12,14.5
+a68,Leandro David Dunhoo,ENGBIOM,15,14,11,15,13.8
+a69,Adele Belchior,ENGBIOM,17,12,20,12,15.2
+a70,Frantceska Borreca,ENGFIS,18,11,19,8,14.0
+a71,Derrick Urias,ENGFIS,11,10,8,14,10.8
+a72,Ana Gabriel Quirino,LCC,10,17,8,19,13.5
+a73,Carolina Antoo,ENGBIOM,16,19,20,10,16.2
+a74,Vânia Sofia Porfirio,ENGBIOM,18,19,18,15,17.5
+a75,Dárcio Wosvaldo Tudela,LEI,8,18,9,18,13.2
+a76,Zhara Couxão,ENGFIS,16,10,14,12,13.0
+a77,Tomé Ferrito,LCC,14,10,15,19,14.5
+a78,Iasmin Paloma Chaveiro,LCC,8,15,19,9,12.8
+a79,Sadagi Cruto,ENGBIOM,13,18,14,18,15.8
+a80,Maria Carolina Josué,ENGFIS,17,20,17,18,18.0
+a81,Quaresma Lancastre,ENGBIOM,17,9,16,19,15.2
+a82,Evaldir Gervasio,ENGFIS,16,19,15,8,14.5
+a83,Dolorinda Adolfo,ENGFIS,11,20,16,8,13.8
+a84,Laudário Frasão,LCC,20,19,10,19,17.0
+a85,Rómula Jeronimo,ENGFIS,10,13,12,11,11.5
+a86,Clésio Rodeiro,LCC,9,13,12,18,13.0
+a87,Feliciano José Avis,ENGFIS,9,11,10,9,9.8
+a88,Afonso Adriano Marca,ENGBIOM,8,16,12,15,12.8
+a89,Victória Miguel Rosete,ENGFIS,8,13,13,18,13.0
+a90,Tome Teroso,ENGFIS,9,9,10,17,11.2
+a91,Constança Filipa Melado,LEI,10,12,8,20,12.5
+a92,Madalena Jesus Alfaiate,LEI,17,14,9,17,14.2
+a93,Bivhan Reimbau,LCC,17,11,8,12,12.0
+a94,Viviana Sofia Gaspar,ENGBIOM,16,16,20,14,16.5
+a95,Íris Soraia Chiote,LEI,11,11,17,16,13.8
+a96,Anaïs Sintra,LCC,19,19,12,9,14.8
+a97,Salvador Banaca,LCC,12,9,20,12,13.2
+a98,Guilherme Matias Almeirão,ENGFIS,14,9,12,11,11.5
+a99,Xavier Luís Bulha,ENGFIS,17,13,8,10,12.0
+a100,Tude Searas,LEI,20,17,8,14,14.8
