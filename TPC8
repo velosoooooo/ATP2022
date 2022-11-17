@@ -1,0 +1,138 @@
+#1a
+def inicDiferente (s1,s2):
+    res=[]
+    bol = True
+    while bol:
+        for carac in s1:
+            if carac in s2:
+                return len(res)
+            else:
+                res.append(carac)
+                print(carac)
+
+#1b
+def acimaMedia(n):
+    res = 0
+    soma = 0
+    i = 0
+    res = []
+    for n in range(1,n+1):
+        soma += n
+        i = i+1
+    media = soma/i
+    for n in range(1,n+1):
+        if n > media:
+            res.append(n)
+    return res
+
+#1c
+def merge(l1, l2):
+    lista = []
+    for n in l1:
+        lista.append(n)
+    for n in l2:
+        if n not in lista:
+            lista.append(n)
+    trocas = True
+    while trocas:
+        trocas = False
+        i = 1
+        while i < len(lista):
+            if lista[i]<lista[i-1]:
+                lista[i],lista[i-1]=lista[i-1],lista[i]
+                trocas = True
+            i = i+1      
+    return lista
+
+#1d
+def figuais(f1,f2):
+    F1 = open(f1)
+    F2 = open(f2)
+    i = 0
+    res = True 
+    listaF1 = []
+    listaF2 = []
+    for linha in F1:
+         listaF1.append(linha)
+    for linha in F2:
+        listaF2.append(linha)
+    if listaF1 == listaF2:
+        res = True
+    else: res = False
+    return res
+
+# Cinemateca = [Filme]
+# Pub = (Título, Ano, Elenco, Géneros)
+# Título = String
+# Ano = Int
+# Elenco = [Ator]
+# Ator = String
+# Géneros = [Género]
+# Género = String
+Filme1 = ("Meet the Parents", 2000, ["Ben Stiller","Robert De Niro",
+      "Blythe Danner","Teri Polo","Owen Wilson"], ["Comedy", "Drama"])
+Filme2 = ("Men of Honor", 2000, ["Robert De Niro","Cuba Gooding, Jr.",
+      "Charlize Theron"], ["Biography", "Drama", "Thriller"])
+Filme3 = ("Analyze That", 2002, ["Robert De Niro","Billy Crystal",
+      "Lisa Kudrow"], ["Comedy"])
+CineUM = [Filme1, Filme2, Filme3]    
+
+#2a
+def atores(cinemateca):
+    res = []
+    for filme in cinemateca:
+        tit,ano,elen,gen = filme
+        for ator in elen:
+            res.append(ator)
+    res.sort()
+    return res
+
+#2b
+def listarPorGenero(cinemateca, genero):
+    dist = {}
+    for filme in cinemateca:
+        tit,ano,elen,listgen = filme
+        for gen in listgen:
+            if gen in dist.keys():
+                dist[gen].append(tit)
+            else:
+                dist[gen]=[tit]
+    return sorted(dist[genero])
+
+#2c
+def maiorElenco( cinemateca ):
+    lista = []
+    for filme in cinemateca:
+        tit,ano,elen,listgen = filme
+        lista.append((tit,len(elen)))
+    maior = lista [0][1]
+    titulo = lista [0][0]
+    for filme in lista:
+        if filme[1]>maior:
+            maior=filme[1]
+            titulo = filme[0]
+    return titulo
+
+print(maiorElenco(CineUM))
+
+#2d
+def filmePorGenero( cinemateca ):
+    distrib= {}
+    for _,_,_, generos in cinemateca:
+        for genero in generos:
+            if genero in distrib.keys():
+                distrib[genero] += 1
+            else:
+                distrib[genero]= 1
+    return distrib
+
+
+#2e
+import matplotlib.pyplot as plt
+
+def graficos (distrib):
+    plt.bar(distrib.keys(), distrib.values())
+    plt.xticks([x for x in range (0, len(distrib.keys()))], distrib.keys(), rotation=75)
+    plt.subplots_adjust(left=0.1, bottom=0.25, right=0.9, top=0.9, wspace=0, hspace=0)
+    plt.title("Distrbuição dos Filmes por Género")
+    plt.show()
